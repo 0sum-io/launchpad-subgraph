@@ -3,7 +3,7 @@ services:
   graph-node:
     image: graphprotocol/graph-node
     ports:
-      - '8000:8000'
+      - '<PORT>:8000'
       - '8001:8001'
       - '8020:8020'
       - '8030:8030'
@@ -19,7 +19,7 @@ services:
       postgres_pass: let-me-in
       postgres_db: graph-node
       ipfs: 'ipfs:5001'
-      ethereum: 'mainnet:https://geth-mordor.etc-network.info'
+      ethereum: 'mainnet:<RPC_URL>'
       GRAPH_LOG: info
   ipfs:
     image: ipfs/kubo:v0.17.0

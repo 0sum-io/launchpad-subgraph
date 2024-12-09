@@ -80,21 +80,14 @@ export function getSubgraphConfig(): SubgraphConfig {
   // subgraph does not support case switch with strings, hence this if else block
   if (selectedNetwork === mainnet_NETWORK_NAME) {
     return {
-      factoryAddress: '0x07DE5780b0e6E6Ac52d292bac2c8037CB9Abd0D1',
+      factoryAddress: '<UNISWAP_V3_FACTORY>',
       stablecoinWrappedNativePoolAddress: '',
       stablecoinIsToken0: false,
-      wrappedNativeAddress: '0xdE41591ED1f8ED1484aC2CD8ca0876428de60EfF',
+      wrappedNativeAddress: '0x4200000000000000000000000000000000000006',
       minimumNativeLocked: BigDecimal.fromString('0'),
       stablecoinAddresses: [],
       whitelistTokens: [],
-      tokenOverrides: [
-        {
-          address: Address.fromString('0xdE41591ED1f8ED1484aC2CD8ca0876428de60EfF'),
-          symbol: 'WGAS',
-          name: 'Wrapped GAS',
-          decimals: BigInt.fromI32(18),
-        },
-      ],
+      tokenOverrides: [],
       poolsToSkip: [],
       poolMappings: [],
     }

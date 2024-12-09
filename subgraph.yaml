@@ -11,9 +11,9 @@ dataSources:
     name: Factory
     network: mainnet
     source:
-      address: '0x07DE5780b0e6E6Ac52d292bac2c8037CB9Abd0D1'
+      address: '<UNISWAP_V3_FACTORY>'
       abi: Factory
-      startBlock: 12608335
+      startBlock: <START_BLOCK> 
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -40,9 +40,9 @@ dataSources:
     name: PresaleManager
     network: mainnet
     source:
-      address: '0x35d02CA89bcBD2421E0B049347AD43308bFA0747'
+      address: '<PRESALE_MANAGER>'
       abi: PresaleManager
-      startBlock: 12608335
+      startBlock: <START_BLOCK>
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7

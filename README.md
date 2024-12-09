@@ -16,8 +16,8 @@ For example: `"deploy-dev": "graph deploy launchpad --ipfs http://161.35.48.172:
 4\. Update the contract addresses in your subgraph project:
 
 - In `subgraph.yaml`, update the addresses for the 
-    - `PresaleManager`: 0x35d02CA89bcBD2421E0B049347AD43308bFA0747
     - `Uni V3 Factory`: 0x07DE5780b0e6E6Ac52d292bac2c8037CB9Abd0D1
+    - `PresaleManager`: 0x35d02CA89bcBD2421E0B049347AD43308bFA0747
 
 ![](https://github.com/user-attachments/assets/d58528de-f474-455b-955e-1b027d2b6cf5)
 ![](https://github.com/user-attachments/assets/aa5705ae-a6f0-4eea-9aef-51df80392563)
