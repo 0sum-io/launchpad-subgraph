@@ -36,6 +36,9 @@ run_sed "s|<UNISWAP_V3_FACTORY>|$UNISWAP_V3_FACTORY|g" "./subgraph.yaml"
 # Replace text in ./subgraph.yaml with FACTORY_ADDRESS
 run_sed "s|<PRESALE_MANAGER>|$PRESALE_MANAGER|g" "./subgraph.yaml"
 
+# Replace text in ./subgraph.yaml with START_BLOCK
+run_sed "s|<START_BLOCK>|$START_BLOCK|g" "./subgraph.yaml"
+
 # Replace text in ./src/utils/chains.ts with FACTORY_ADDRESS
 run_sed "s|<UNISWAP_V3_FACTORY>|$UNISWAP_V3_FACTORY|g" "./src/utils/chains.ts"
 
