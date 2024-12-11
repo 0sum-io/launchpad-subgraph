@@ -17,7 +17,6 @@ export enum ChainId {
 }
 
 // subgraph does not support string enums, hence these constants
-const BERA_BARTIO_NETWORK_NAME = 'bera-bartio'
 const ARBITRUM_ONE_NETWORK_NAME = 'arbitrum-one'
 const AVALANCHE_NETWORK_NAME = 'avalanche'
 const BASE_NETWORK_NAME = 'base'

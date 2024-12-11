@@ -4,9 +4,9 @@ import { Bundle, Pool, Token } from '../../types/schema'
 import { Initialize } from '../../types/templates/Pool/Pool'
 import { getSubgraphConfig, SubgraphConfig } from '../../utils/chains'
 import {
+  updatePool4HourData,
   updatePool15MinuteData,
   updatePool30MinuteData,
-  updatePool4HourData,
   updatePoolDayData,
   updatePoolHourData,
   updatePoolMinuteData,

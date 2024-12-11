@@ -6,15 +6,15 @@ import { convertTokenToDecimal, loadTransaction, safeDiv } from '../../utils'
 import { getSubgraphConfig, SubgraphConfig } from '../../utils/chains'
 import { ONE_BI, ZERO_BD } from '../../utils/constants'
 import {
+  updatePool4HourData,
   updatePool15MinuteData,
   updatePool30MinuteData,
-  updatePool4HourData,
   updatePoolDayData,
   updatePoolHourData,
   updatePoolMinuteData,
+  updateToken4HourData,
   updateToken15MinuteData,
   updateToken30MinuteData,
-  updateToken4HourData,
   updateTokenDayData,
   updateTokenHourData,
   updateTokenMinuteData,

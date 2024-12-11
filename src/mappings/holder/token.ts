@@ -1,16 +1,16 @@
 import { BigDecimal, Bytes, ethereum } from '@graphprotocol/graph-ts'
 
 import { Pool, Token, TransferEvent } from '../../types/schema'
+import { Swap as SwapEvent } from '../../types/templates/Pool/Pool'
 import { Transfer } from '../../types/templates/StandardToken/ERC20'
 import { convertTokenToDecimal } from '../../utils'
+import { ZERO } from '../../utils/number'
 import {
   decreaseAccountBalance,
   getOrCreateAccount,
   increaseAccountBalance,
   saveAccountBalanceSnapshot,
 } from './account'
-import { Swap as SwapEvent } from '../../types/templates/Pool/Pool'
-import { ZERO } from '../../utils/number'
 
 export function handleSwapForBalance(event: SwapEvent): void {
   const pool = Pool.load(event.address.toHexString())!
