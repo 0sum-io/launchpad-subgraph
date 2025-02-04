@@ -2,7 +2,7 @@ import { BigDecimal, BigInt } from '@graphprotocol/graph-ts'
 
 import { exponentToBigDecimal, safeDiv } from '../utils/index'
 import { Bundle, Pool, Token } from './../types/schema'
-import { ONE_BD, ZERO_BD, ZERO_BI, WETH_ADDRESS } from './constants'
+import { ONE_BD, WETH_ADDRESS, ZERO_BD, ZERO_BI } from './constants'
 
 export const USDC_WETH_03_POOL = '0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8'
 export const STABLECOIN_IS_TOKEN0 = true
