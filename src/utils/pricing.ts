@@ -2,9 +2,8 @@ import { BigDecimal, BigInt } from '@graphprotocol/graph-ts'
 
 import { exponentToBigDecimal, safeDiv } from '../utils/index'
 import { Bundle, Pool, Token } from './../types/schema'
-import { ONE_BD, ZERO_BD, ZERO_BI } from './constants'
+import { ONE_BD, ZERO_BD, ZERO_BI, WETH_ADDRESS } from './constants'
 
-export const WETH_ADDRESS = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
 export const USDC_WETH_03_POOL = '0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8'
 export const STABLECOIN_IS_TOKEN0 = true
 
@@ -77,7 +76,7 @@ export function findNativePerToken(
   stablecoinAddresses: string[],
   minimumNativeLocked: BigDecimal,
 ): BigDecimal {
-  if (token.id == wrappedNativeAddress) {
+  if (token.id == WETH_ADDRESS) {
     return ONE_BD
   }
   const whiteList = token.whitelistPools
