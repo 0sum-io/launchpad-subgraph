@@ -40,7 +40,7 @@ dataSources:
     name: PresaleManager
     network: mainnet
     source:
-      address: '<PRESALE_MANAGER>'
+      address: '<PRESALE_POOL_MANAGER>'
       abi: PresaleManager
       startBlock: <START_BLOCK>
     mapping:

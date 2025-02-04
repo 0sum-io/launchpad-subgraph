@@ -2,9 +2,10 @@
 
 # set variables
 RPC_URL="https://rpc-pepe-unchained-test-ypyaeq1krb.t.conduit.xyz"
-START_BLOCK=961300
-UNISWAP_V3_FACTORY="0x07DE5780b0e6E6Ac52d292bac2c8037CB9Abd0D1" # lowercased
-PRESALE_MANAGER="0x35d02CA89bcBD2421E0B049347AD43308bFA0747" # lowercased
+START_BLOCK=5947669
+PRESALE_POOL_MANAGER="0xf13d96d600fb27b5f34d9cfc1b3cb68f8dcaa62f" # lowercased
+UNISWAP_V3_FACTORY="0x26eb58c5eb13f56849770cd8333a83f3e6086665" # lowercased
+WETH_ADDRESS="0x4200000000000000000000000000000000000006"
 
 # if darwin, set port to 8000
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -34,13 +35,16 @@ run_sed "s|<PORT>|$PORT|g" "./docker-compose.yml"
 run_sed "s|<UNISWAP_V3_FACTORY>|$UNISWAP_V3_FACTORY|g" "./subgraph.yaml"
 
 # Replace text in ./subgraph.yaml with FACTORY_ADDRESS
-run_sed "s|<PRESALE_MANAGER>|$PRESALE_MANAGER|g" "./subgraph.yaml"
+run_sed "s|<PRESALE_POOL_MANAGER>|$PRESALE_POOL_MANAGER|g" "./subgraph.yaml"
 
 # Replace text in ./subgraph.yaml with START_BLOCK
 run_sed "s|<START_BLOCK>|$START_BLOCK|g" "./subgraph.yaml"
 
 # Replace text in ./src/utils/chains.ts with FACTORY_ADDRESS
 run_sed "s|<UNISWAP_V3_FACTORY>|$UNISWAP_V3_FACTORY|g" "./src/utils/chains.ts"
+
+# Replace text in ./src/utils/constants.ts with WETH_ADDRESS
+run_sed "s|<WETH_ADDRESS>|$WETH_ADDRESS|g" "./src/utils/constants.ts"
 
 # install nodejs
 if ! command -v node &> /dev/null
